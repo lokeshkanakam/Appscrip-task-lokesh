@@ -1,14 +1,10 @@
 import React, {useState, useEffect}from 'react'
 import './index.css'
 import ProductCard from '../ProductCard'
-import { MdRecommend } from 'react-icons/md'
 
 const Products = () => {
     const [productList, setProductsList] = useState([])
-    const [Error, setError] = useState({
-        isError : false,
-        errorMsg : ''
-    })
+   
     const [params, setParams] = useState({
       recommend:'',
       newestFirst:'',
@@ -18,7 +14,7 @@ const Products = () => {
     })
     const [showFilter, setShowFilter] = useState(false)
     const url = `https://fakestoreapi.com/products`
-    useEffect(() =>{getProducts(url)},[])
+    useEffect(() =>{getProducts(url)})
 
     const getProducts = async() =>{
         try {
@@ -27,7 +23,6 @@ const Products = () => {
             console.log(data)
             setProductsList(data)
         } catch (error) {
-            setError({isError: true, errorMsg: error})
         }
     }
   const filterText = showFilter ? '< HIDE FILTER' : '> SHOW FILTER'

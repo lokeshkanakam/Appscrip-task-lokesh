@@ -55,11 +55,11 @@ function App() {
         <img src='./Icons.png' alt="icons"/>
       </nav>
       <div className='nav-links-container'>
-        <a href='#' className='nav-link'>Shop</a>
-        <a href='#' className='nav-link'>Skills</a>
-        <a href='#' className='nav-link'>Stories</a>
-        <a href='#' className='nav-link'>about</a>
-        <a href='#' className='nav-link'>contact us</a>
+        <a href='./index.html' className='nav-link'>Shop</a>
+        <a href='./index.html' className='nav-link'>Skills</a>
+        <a href='./index.html' className='nav-link'>Stories</a>
+        <a href='./index.html' className='nav-link'>about</a>
+        <a href='./index.html' className='nav-link'>contact us</a>
       </div>
       <hr className='break'/>
     </div>

@@ -6,7 +6,7 @@ const ProductCard = props => {
     const {image, title} = each
   return (
     <div className='product-card'>
-      <img src={image} alt={`${title} + image`} className='product-image'/>
+      <img src={image} alt={title} className='product-image'/>
       <div className='title-like'>
         <p className='product-title'>{title}</p>
         <button type='button' className='like-btn'>
@@ -15,7 +15,7 @@ const ProductCard = props => {
           </svg>
         </button>  
       </div>
-      <p className='product-description'><a className='sign-in' href='#'>sign in</a>or Create an Account to see pricing</p>
+      <p className='product-description'><a className='sign-in' href='./index.html'>sign in</a>or Create an Account to see pricing</p>
     </div>
   )
 }
