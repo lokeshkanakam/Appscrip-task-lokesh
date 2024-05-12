@@ -1,38 +1,285 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inter;
+}
+body{
+  min-height: 100vh;
+}
+.mobile-navbar{
+  display: flex;
+  align-items: center;
+  height: 55px;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: solid 2px #f1f1f1;
+  top: -55px;
+}
+.mobile-navbar.sticky-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.bars-logo{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #292D32;
+}
+.bars{
+  margin-right: 10px;
+}
+
+/* .bars ~ i{
+ display: inline-block;
+ width: 20px;
+ height: 30px;
+} */
+
+.logo{
+  width: 20.1px;
+  height: 20.1px;
+}
+.logo-text{
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 1px;
+  font-family: inter;
+  color: #000;
+}
+.header{
+  height: 46px;
+  width: 100%;
+  padding: 16px;
+}
+.home-shop-container{
+  width: 25%;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.home{
+  font-size: 12px;
+  font-weight: 400;
+  color: #BfC8CD;
+  text-transform: uppercase;
+}
+.vertical-line{
+  background-color: #BfC8CD;
+  height: 14px;
+  width: 3px;
+}
+.shop{
+font-size: 12px;
+text-transform: uppercase;
+font-weight: 400;
+color: #252020;
+}
+
+.text-container{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.text-body{
+  width: 92%;
+}
+.heading{
+  color: #252020;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.description{
+  color: #252020;
+}
+.products-container{
+  width: 100%;
+}
+
+.footer-section-mobile{
+  background-color: #252020;
+  color: #fff;
+  padding: 20px 10px;
+}
+.footer-headings{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 10px 0;
+}
+.footer-text{
+  font-size: 12px;
+}
+.input{
+  border: none;
+  outline: none;
+  padding: 20px 12px;
+  margin: 15px 0;
+  width: 60%;
+  font-size: 15px;
+}
+.subscribe-btn{
+  margin-left: 20px;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  color: #7d7b7b;
+  outline: none;
+  background: transparent;
+  border: solid 1px #7d7b7b;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.break{
+  background-color: #fff;
+  margin: 20px 0;
+}
+.currency-falg{
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.flag{
+  margin-right: 20px;
+}
+.drop-down{
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  width: 80%;
+}
+.options{
+  background-color: #252020;
+  font-size: 13px;
+  border: none;
+  outline: none;
+}
+
+.payment-cards{
+  margin: 20px 0;
+}
+.align-center{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer-section-desktop{
+  background-color: #252020;
+  color: #fff;
+  padding: 50px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer-section-desktop{
+  display: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer-top{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-bottem{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.footer-bottom-headings{
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
+.footer-bottom-text{
+  color: #f1f1f1;
+  font-size: 17px;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+.social-media-icons{
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.copy-rights{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+
+.desktop-navbar{
+  display: none;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 20px 10px;
+  margin: 30px 0;
+}
+.nav-links-container{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.nav-link{
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 18px;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  transition: 0.3sec;
+}
+.nav-link:hover.nav-link::after{
+  content: '';
+  height: 1px;
+  width: 80%;
+  background-color: #000;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width:768px) {
+  .mobile-navbar{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .header{
+    display: none;
+  }
+  .desktop-navbar{
+    display: block;
+  }
+  .text-body{
+    width: 70%;
+  }
+  .heading{
+    font-size: 38px;
+    font-weight: 600;
+    margin: 10px;
+  }
+  .description{
+    font-size: 20px;
+  }
+  .footer-section-mobile{
+    display: none;
+  }
+  .footer-section-desktop{
+    display: block;
+  }
+  .footer-headings{
+    font-size: 22px;
+  }
+  .footer-text{
+    font-size: 15px;
   }
 }
